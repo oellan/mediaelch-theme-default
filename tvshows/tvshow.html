@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MediaElch Collection Export | TV Show</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MediaElch">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mediaelch.css" rel="stylesheet">
+    <link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar">
+  	  <div class="navbar-inner">
+          <div class="container">
+  	      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  	        <span class="icon-bar"></span>
+  	        <span class="icon-bar"></span>
+  	        <span class="icon-bar"></span>
+  	      </a>
+            <a class="brand" href="../index.html">MediaElch Collection</a>
+  		  <div class="nav-collapse collapse">
+  	        <ul class="nav">
+  			  <li><a href="../movies.html">Movies</a></li>
+  			  <li class="active"><a href="../tvshows.html">TV Shows</a></li>
+  			  <li><a href="../concerts.html">Concerts</a></li>
+  			</ul>			  
+  		  </div>
+  	    </div>
+  	  </div>
+  	</div>
+	  
+    <div class="container tvshow-container">
+		<div class="image">
+			<img src="{{ IMAGE.POSTER[200,400] }}" />
+		</div>
+		<div class="main-infos">
+			<h3>{{ TVSHOW.TITLE }}<span class="year">{{ TVSHOW.FIRST_AIRED }}</span><span class="rating label label-warning pull-right">{{ TVSHOW.RATING }}</span></h3>
+			<div class="genres">
+				{{ BEGIN_BLOCK_GENRES }}
+					<span class="label">{{ GENRE.NAME }}</span>
+				{{ END_BLOCK_GENRES }}
+			</div>
+			<p class="plot">{{ TVSHOW.PLOT }}</p>
+		</div>
+		<div class="episode-list">
+			{{ BEGIN_BLOCK_SEASON }}
+				<h4>Season {{ SEASON }}</h4>
+				<ul class="unstyled">
+				{{ BEGIN_BLOCK_EPISODE }}
+					<li>
+						<a href="{{ EPISODE.LINK }}">
+							Episode {{ EPISODE.EPISODE }}: {{ EPISODE.TITLE }}
+						</a>
+					</li>
+				{{ END_BLOCK_EPISODE }}
+				</ul>
+			{{ END_BLOCK_SEASON }}
+		</div>
+	</div>	
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
