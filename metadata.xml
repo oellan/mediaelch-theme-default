@@ -2,10 +2,13 @@
 <metadata>
 	<name>MediaElch</name>
 	<identifier>mediaelch-default</identifier>
+	<website>https://github.com/mediaelch/mediaelch-theme-default</website>
 	<description>MediaElch default theme</description>
 	<description lang="de">MediaElch Standard Theme</description>
 	<author>Daniel Kabel</author>
 	<version>1.0</version>
+	<mediaelch-min>2.6.6</mediaelch-min>
+	<engine>simple</engine>
 	<supports>
 		<section>movies</section>
 		<section>tvshows</section>
