@@ -6,7 +6,7 @@
 	<description>MediaElch default theme</description>
 	<description lang="de">MediaElch Standard Theme</description>
 	<author>Daniel Kabel</author>
-	<version>1.0</version>
+	<version>1.1</version>
 	<mediaelch-min>2.6.6</mediaelch-min>
 	<engine>simple</engine>
 	<supports>
